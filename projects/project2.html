@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <title>Todo List | Amily Chang's Code Showcase</title>
+    <script src="../templates.js" defer></script> <!-- 動態載入 head、header、Bootstrap -->
+</head>
+<body>
+    <div class="projects-container">
+        <div id="app" class="m-5 p-5">
+            <header class="mb-3">
+                <h4>My Todo</h4>
+                <div class="content__wrapper">
+                    <input type="text" placeholder="add item" id="new-todo" class="form--custom form-control me-2">
+                    <button id="add-btn" class="btn btn-light">Add</button>
+                </div>
+            </header>
+            <ul id="my-todo" class="list-unstyled">
+                <h4>Todo</h4>
+            </ul>
+            <h4>Done</h4>
+            <ul id="my-done" class="list-unstyled"></ul>
+        </div>
+    </div>
+</body>
+</html>

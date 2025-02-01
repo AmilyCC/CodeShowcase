@@ -1,0 +1,33 @@
+#app {
+    background: #c8c9e2;
+}
+
+.content__wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form--custom {
+    width: auto;
+}
+
+.checked {
+    color: #723a3a;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.fa {
+    margin: 0 5px;
+    color: #282b62;
+}
+
+li>label[for="todo"] {
+    width: 210px;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-weight: 900;
+}

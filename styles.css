@@ -1,0 +1,149 @@
+/* 🔹 全站樣式 */
+body {
+    background: #F8F9FA;
+    color: #a35a2f;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 頁首 */
+.header {
+    background: #265e6d;
+    color: #cfded8;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: 900;
+}
+.p-header{        
+    background:#faf0e5;
+}
+h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    font-family: 'Roboto', sans-serif;
+}
+#projectTitle{
+    margin-top: 40px;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #cc463b;
+    /* text-shadow: 2px 3px 0 #006186; */
+}
+
+/* 🔹 主要內容區 */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 🔹 作品卡片 */
+.project-card {
+    background: #cfded8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 作品圖片 */
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* 🔹 作品標題 */
+.project-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* 🔹 作品按鈕 */
+.project-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #265e6d;
+    color: #cfded8;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.project-button:hover {
+    background: #3e8e8f;
+}
+
+/* 🔹 返回作品列表按鈕 */
+.backToTop {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #006186;
+    color: #cfded8;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.backToTop:hover {
+    background: #3e8e8f;
+    transform: scale(1.05);
+}
+
+
+/* 🔹 響應式設計（適應手機版） */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+    .projectTitle{
+        margin-top: 60px;
+    }
+    .backToTop {
+        top: 10px;
+        left: 10px;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}

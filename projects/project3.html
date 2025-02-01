@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <title>RGB to Hex Converter | Amily Chang's Code Showcase</title>
+    <script src="../templates.js" defer></script> <!-- 動態載入 head、header、Bootstrap -->
+</head>
+<body>
+    <div class="projects-container">
+        <div class="all-wrapper container d-flex flex-column align-items-center">
+            <div class="ms-5 mt-5 me-5 row">
+              <h3>RGB to Hex Converter<h3>
+            </div>
+            <div class="color-make ms-5 mt-5 me-5 row w-75">
+              <div class="main mb-5 col-12 pt-3">
+                <div class="content_wrapper mb-3 justify-content-between">
+                  <div class="c-block r-sample me-2">R</div>
+                  <input type="range" min="0" max="255" id="r-input" class="w-75 me-2" value="128">
+                  <div class="color-sample r-sample">128</div>
+                </div>
+                <div class="content_wrapper mb-3 justify-content-between">
+                  <div class="c-block g-sample me-2">G</div>
+                  <input type="range" min="0" max="255" id="g-input" class="w-75  me-2" value="128">
+                  <div class="color-sample g-sample">128</div>
+                </div>
+                <div class="content_wrapper mb-3 justify-content-between">
+                  <div class="c-block b-sample me-2">B</div>
+                  <input type="range" min="0" max="255" id="b-input" class="w-75  me-2" value="128">
+                  <div class="color-sample b-sample">128</div>
+                </div>
+              </div>
+              <div class="mb-3 p-0 col-12 d-flex flex-column justify-content-center">
+                <div class="hex-show-text ">#808080</div>
+              </div>
+            </div>
+          
+          </div>
+    </div>
+</body>
+</html>
