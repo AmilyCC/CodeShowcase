@@ -1,4 +1,5 @@
 let colorMake = document.querySelector(".color-make");
+let conventerCon = document.querySelector("#conventer_con")
 
 colorMake.addEventListener("input", (e) => {
   const target = e.target;
@@ -27,9 +28,7 @@ colorMake.addEventListener("input", (e) => {
     const hexText =
       target.parentElement.parentElement.parentElement.children[1].children[0];
     hexText.innerText = hex.toUpperCase();
-    document
-      .querySelector("body")
-      .setAttribute("style", `background-color:${hex};`);
+    conventerCon.setAttribute("style", `background-color:${hex};`);
 
     //前後顏色格顏色變化
     let bgColorR = 0;

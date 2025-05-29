@@ -1,109 +1,251 @@
 /* 🔹 全站樣式 */
 body {
-    background: #F8F9FA;
-    color: #a35a2f;
-    font-family: 'Roboto', sans-serif;
+    background: #ffffff;
+    color: #2c3e50;
+    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 /* 🔹 頁首 */
 .header {
-    background: #265e6d;
-    color: #cfded8;
-    padding: 20px 0;
-    font-size: 24px;
-    font-weight: bold;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-weight: 900;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #ffffff;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
-.p-header{        
-    background:#faf0e5;
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 1;
 }
-h1{
+
+.header h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: 800;
+    color: #c2c2c2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 0.8s ease-out;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.header .project-page-title{
+    color: #221f28;
+}
+.header h1::after {
+    content: '';
     display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    font-family: 'Roboto', sans-serif;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    margin: 15px auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
 }
-#projectTitle{
+
+.header:hover h1::after {
+    width: 150px;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.p-header {        
+    background: #f8f9fa;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 1em 0;
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+}
+
+#projectTitle {
     margin-top: 40px;
+    font-size: 2.5em;
+    color: #2c3e50;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#projectTitle::after {
+    content: '';
     display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    font-family: 'Roboto', sans-serif;
+    width: 50px;
+    height: 3px;
+    background: #3498db;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* 🔹 專案頁面標題 */
+.project-page-title {
+    font-size: 2.8em;
+    font-weight: 800;
+    color: #2c3e50;
     text-align: center;
-    color: #cc463b;
-    /* text-shadow: 2px 3px 0 #006186; */
+    margin: 40px 0;
+    padding: 0 20px;
+    position: relative;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.project-page-title::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+.project-page-title::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #2ecc71, #3498db);
+    border-radius: 2px;
+}
+
+/* 專案頁面容器樣式 */
+.project-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 /* 🔹 主要內容區 */
 .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 5%;
-    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding: 60px 5%;
+    max-width: 1400px;
     margin: auto;
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
 }
 
 /* 🔹 作品卡片 */
 .project-card {
-    background: #cfded8;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover::before {
+    opacity: 1;
 }
 
 /* 🔹 作品圖片 */
 .project-image {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.03);
 }
 
 /* 🔹 作品標題 */
 .project-title {
-    font-size: 20px;
+    font-size: 1.8em;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 0.5px;
 }
 
 /* 🔹 作品按鈕 */
 .project-button {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #265e6d;
-    color: #cfded8;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 30px;
     font-size: 16px;
-    transition: background 0.3s ease-in-out;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, background-color;
+    transform: translateZ(0);
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.2);
 }
 
 .project-button:hover {
-    background: #3e8e8f;
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    transform: translateY(-2px) translateZ(0);
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.3);
+    color: #ffffff;
+    text-decoration: none;
 }
 
 /* 🔹 返回作品列表按鈕 */
@@ -111,39 +253,82 @@ h1{
     position: fixed;
     top: 20px;
     left: 20px;
-    background: #006186;
-    color: #cfded8;
+    background: #2c3e50;
+    color: #ffffff;
     text-decoration: none;
     font-size: 16px;
-    padding: 10px 15px;
+    padding: 12px 24px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, background-color;
+    transform: translateZ(0);
+    z-index: 1000;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .backToTop:hover {
-    background: #3e8e8f;
-    transform: scale(1.05);
+    background: #34495e;
+    transform: translateY(-2px) translateZ(0);
+    text-decoration: none;
+    color: #ffffff;
 }
 
+/* 🔹 響應式設計 */
+@media screen and (max-width: 1200px) {
+    .projects-container {
+        padding: 40px 4%;
+        gap: 30px;
+    }
+}
 
-/* 🔹 響應式設計（適應手機版） */
 @media screen and (max-width: 768px) {
     .projects-container {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        padding: 30px 3%;
+        gap: 25px;
     }
 
     .project-card {
-        width: 90%;
+        padding: 25px;
     }
-    .projectTitle{
-        margin-top: 60px;
+
+    .project-image {
+        height: 180px;
     }
-    .backToTop {
-        top: 10px;
-        left: 10px;
+
+    .project-title {
+        font-size: 1.6em;
+    }
+
+    .project-button {
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-image {
+        height: 160px;
+    }
+
+    .project-title {
+        font-size: 1.4em;
+    }
+
+    .project-button {
+        padding: 8px 20px;
         font-size: 14px;
-        padding: 8px 12px;
     }
 }

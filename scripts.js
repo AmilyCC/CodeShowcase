@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // 作品資料
     const projects = [
         { title: "Tiger Machine", image: "assets/p1.png", link: "./projects/project1.html" },
-        { title: "Todo List", image: "assets/p2.png", link: "./projects/project2.html" },
-        { title: "RGB to Hex Converter", image: "assets/p3.png", link: "./projects/project3.html" }
+        { title: "RGB to Hex Converter", image: "assets/p3.png", link: "./projects/project3.html" },
+        { title: "Memorizing Game", image: "assets/p4.png", link: "./projects/project4.html" },
+        { title: "Todo List", image: "assets/p2.png", link: "./projects/project2.html" }
     ];
 
     // 獲取作品容器
@@ -31,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
         projectButton.classList.add("project-button");
         projectButton.href = project.link;
         projectButton.textContent = "查看作品";
-        projectButton.target = "_blank";
 
         // 組合元素
         projectCard.appendChild(projectTitle);

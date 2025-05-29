@@ -1,0 +1,119 @@
+#header {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 85%;
+}
+
+#header .title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#header .title img {
+  max-width: 3em;
+  height: 100%;
+  margin: auto 0;
+}
+
+#header .title h2 {
+  padding-left: 0.5em;
+}
+
+#header .score {
+  margin: 0;
+  color: #6c90ac;
+}
+
+#header .tried {
+  margin-top: 0;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+.Pcard {
+  flex: 7% 0 1;
+  height: auto;
+  aspect-ratio: 388/470;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin:2px;
+  box-sizing: border-box;
+}
+
+.back {
+  background: url('../projects/images/card.webp');
+  background-size: cover;
+}
+.clicked{
+  transform: rotateY(180deg);
+  transition: transform 0.6s;
+}
+
+.paired {
+  background-color: #dae0e3;
+}
+
+.Pcard img {
+  max-width: 28%;
+  align-self: center;
+}
+
+.Pcard p {
+  margin: 3px;
+  font-size: 10px;
+}
+
+.Pcard p:last-child {
+  transform: rotate(180deg);
+}
+.wrong{
+  animation:wrongAnimation 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes wrongAnimation {
+  to{
+      border: 2px solid #ffd54f;
+  }
+}
+
+/** Game finished **/
+.completed {
+  position: absolute;
+  z-index: 999;
+  top: 33vh;
+  background-color: RGBA(232, 246, 254, 0.8);
+  width: 100vw;
+  padding: 50px 0;
+}
+
+.completed>p {
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+.completed>p:first-child {
+  font-size: 3em;
+  font-weight: 700;
+  color: #758d9a;
+}
+
+@media screen and (max-width:768px) {
+  .Pcard {
+      margin: 2px auto;
+      flex: 23% 0 1;
+      height: 27vw;
+  }
+}
